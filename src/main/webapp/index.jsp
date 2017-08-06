@@ -1,0 +1,19 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: wrp
+  Date: 2017/8/6
+  Time: 16:15
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>requirejs demo</title>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/src/css/index.css"/>
+</head>
+<body>
+
+<%@include file="src/inc.jsp"%>
+<script src="<%=request.getContextPath()%>/src/js/app.js"></script>
+</body>
+</html>
