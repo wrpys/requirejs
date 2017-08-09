@@ -9,10 +9,13 @@
 <html>
 <head>
     <title>requirejs demo</title>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/src/css/index.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/src/css/bootstrap.min.css"/>--%>
+    <%--<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/src/css/index.css"/>--%>
 </head>
 <body>
 
+    <button class="btn btn-default" id="user">获取用户信息并打印</button>
+    <p id="userInfo"></p>
 <%@include file="src/inc.jsp"%>
 <script src="<%=request.getContextPath()%>/src/js/app.js"></script>
 </body>
