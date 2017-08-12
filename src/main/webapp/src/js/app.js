@@ -1,42 +1,15 @@
 /**
  * Created by wrp on 2017/8/6.
  */
-requirejs.config({
-    baseUrl: contextPath + '/src/js',
-    paths: {
-        'jquery': 'lib/jquery',
-        'bootstrap': './lib/bootstrap',
-        'modernizr': './lib/modernizr',
-        'backbone': './lib/backbone',
-        'underscore': './lib/underscore',
-        'text': './lib/require/text',
-        'text': './lib/require/i18n'
-    },
-    shim: {
-        'modernizr': {
-            exports: 'Modernizr'
-        },
-        'bootstrap': ['jquery']
-    },
-    map: {
-        // 不同模块使用不同jquery
-        // 'app/api': {
-        //     'jquery': './lib/jquery'
-        // },
-        // 'app/api2': {
-        //     'jquery': './lib/jquery2'
-        // }
-        '*': {
-            'css': './lib/require/css'
-        }
-    },
-    waitSeconds: 7,
-    urlArgs: '_=' + new Date().getTime()
-});
-require(['jquery', './app/api', 'modernizr', 'backbone', 'css!' + contextPath + '/src/css/bootstrap.min.css', 'css!' + contextPath + '/src/css/index.css'],
-        function ($, api, modernizr, backbone) {
+
+require(['jquery', './app/api', 'modernizr', 'backbone', 'i18n!./nls/message', 'bootstrap',  'css!lib/css/bootstrap.min.css', 'css!lib/css/index.css'],
+        function ($, api, modernizr, backbone, i18n) {
     console.log(backbone);
     console.log(modernizr);
+    console.log(i18n);
+
+    $("#user").after('<button class="btn btn-default">' + i18n.edit + '</button>');
+
     $("#user").click(function () {
         // api.getUser().then(function (user) {
         //     console.log(user)

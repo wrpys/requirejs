@@ -1,0 +1,19 @@
+{
+  "name": "requirejs",
+  "version": "1.0.0",
+  "description": "requirejs demo",
+  "main": "index.js",
+  "scripts": {
+    "package": "node src/main/webapp/r.js -o src/main/webapp/app.built.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrpys/requirejs.git"
+  },
+  "author": "wrp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrpys/requirejs/issues"
+  },
+  "homepage": "https://github.com/wrpys/requirejs#readme"
+}

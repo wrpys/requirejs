@@ -1,8 +1,9 @@
 /**
  * Created by Administrator on 2017/8/9.
  */
-define(['jquery'], function ($) {
-   return {
+// 'text!' + contextPath + '/src/js/user.html!strip'只要body
+define(['jquery', 'text!./user.html!strip'], function ($, userHtml) {
+    return {
        getUser: function () {
            var def = $.Deferred();
            require(['./app/user'], function (user) {
@@ -16,10 +17,7 @@ define(['jquery'], function ($) {
            })
        },
        loadUser: function () {
-           // 'text!' + contextPath + '/src/js/user.html!strip'只要body
-           require(['text!' + contextPath + '/src/js/user.html!strip'], function (userHtml) {
-              $("#userInfo").html(userHtml)
-           });
+           $("#userInfo").html(userHtml)
        }
    }
 });
