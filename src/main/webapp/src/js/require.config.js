@@ -7,10 +7,8 @@ if (language) {
     locale = language[1].split('_')[0];
 }
 
-console.log(contextPath)
-
 requirejs.config({
-    baseUrl:  typeof contextPath  !== 'undefined' ? contextPath + '/js' : './src/js',
+    baseUrl:  typeof sourcePath  !== 'undefined' ? sourcePath + '/js' : './src/js',
     paths: {
         'jquery': 'lib/jquery',
         'bootstrap': './lib/bootstrap',

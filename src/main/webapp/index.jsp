@@ -16,7 +16,7 @@
 
     <button class="btn btn-default" id="user">获取用户信息并打印</button>
     <p id="userInfo"></p>
-<%@include file="src/inc.jsp"%>
-<script src="<%=contextPath%>/js/app.js"></script>
+<%@include file="pages/inc.jsp"%>
+<script src="<%=sourcePath%>/js/app.js"></script>
 </body>
 </html>

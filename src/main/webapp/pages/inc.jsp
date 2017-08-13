@@ -1,17 +1,18 @@
 <%@ page language="java" import="com.wrpys.ssm.common.Config" %>
 <%
     String contextPath = request.getContextPath();
+    String sourcePath = contextPath;
     Config c = new Config();
     if (c.getDebug()) {
-        contextPath += "/src";
+        sourcePath += "/src";
     } else {
-        contextPath += "/build";
+        sourcePath += "/build";
     }
-    System.out.println("basePath=" + contextPath);
 %>
 <script type="text/javascript">
     var contextPath = "<%=contextPath%>";
+    var sourcePath = "<%=sourcePath%>";
 </script>
 <%--data-main="<%=request.getContextPath()%>/src/js/app"--%>
-<script src="<%=contextPath%>/js/lib/require.js"></script>
-<script src="<%=contextPath%>/js/require.config.js"></script>
+<script src="<%=sourcePath%>/js/lib/require.js"></script>
+<script src="<%=sourcePath%>/js/require.config.js"></script>
